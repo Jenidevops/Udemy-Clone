@@ -106,11 +106,13 @@ body {
     border-radius: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
+    border: solid 1px #a435f0;
 }
-
 .categories p:hover {
-    background-color: #8229c7;
-    color: #fff;
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid 1px #a435f0;
 }
 
 /* Sale Image */
@@ -140,8 +142,22 @@ body {
     justify-content: center; 
     align-items: center;    
     text-align: center;     
-    font-weight: bold;       
-    
+    font-weight: bold;
+    animation-name: zoom;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;       
+  
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
