@@ -22,6 +22,9 @@ body {
     gap: 10px;
     align-items: center;
     background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar__s1__title {
@@ -64,6 +67,26 @@ body {
 .navbar__s3 p:hover {
     color: #a435f0;
 }
+/* my learning pop-up */
+.mylearning {
+    position: relative;
+    cursor: pointer;
+}
+.mylearning__popup {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
 
 /* Categories */
 .categories {
@@ -91,11 +114,36 @@ body {
 }
 
 /* Sale Image */
+.sale-image {
+    position: relative;
+}
 .sale-image img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
+.sale-image__offer {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    background-color: white;
+    color: black;
+    width: 35%;
+    height: 25%;
+    padding: 2%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;     
+    font-weight: bold;       
+    
+}
+
 
 /* Recommended Section */
 .recommended {
